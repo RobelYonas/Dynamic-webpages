@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="title">Postapp</h2>
+        <nav>
+            <ul class="nav-link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile..html">Porfile</a></li>
+                <li><a href="post.html">Post</a></li>
+            </ul>
+        </nav>
+        <a class="contactButton" href="#"><button>contact</button></a>
+    </header>
+
+    <main>
+        <div class="userpost" id="user-post">
+            <!-- Posts will be loaded here by post.js -->
+        </div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="userModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody">
+            <!-- User details will be loaded here by post.js -->
+        </div>
+    </div>
+    </div>
+
+    <script src="post.js"></script>
+</body>
+</html>

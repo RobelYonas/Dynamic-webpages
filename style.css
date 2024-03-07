@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #11191f;
+    color: white;
+    box-sizing: border-box;
+}
+
+li, a{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+.nav-link li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Existing styles */
+.nav-link li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px; /* Provide space for the underline */
+    display: block; /* Ensure the padding and border are visible */
+}
+
+/* Hover effect */
+.nav-link li a:hover {
+    color: #4ba9e9; /* Change text color on hover */
+    border-bottom: 2px solid #4ba9e9; /* Add an underline on hover */
+}
+
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: aqua;
+    color: black;
+}
+
+.title{
+    margin-right: auto;
+}
+
+.container { /* Corrected typo and applied styles */
+    margin-top: 20px;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.even-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.text-content, .img-container, .container-img { /* Added for specific styling of text and iframe containers */
+    flex: 1; /* Allows child divs to take up equal space */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.even-column h1, .even-column p {
+    font-weight: 100;
+    margin-bottom: 5px;
+    max-width: 100%; /* Ensures text does not overflow its container */
+}
+
+.even-column h1 {
+    font-size: 35px;
+}
+
+.even-column h1, .even-column p{
+    object-fit: contain;
+}
+
+.img-container img{
+    padding-left: 250px;
+}
+
+.container-img img{
+    width: 100%; /* Makes iframe responsive to its parent container's width */
+    height: auto; /* Added a fixed height for better presentation */
+    border: none;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+    
+}
+
+.infinte-scroll{
+    margin-top: 14px;
+    overflow: hidden;
+    padding: 40px 0;
+    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.image-scroll{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.image-scroll img{
+    margin: 0 40px;
+}
+
+.userinfo, .userpost{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.user-Card, .userSection{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.user-Card img{
+    border: 1px solid #0a303f;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.user-Card, .user-info, .user-Card p , .userSection p {
+    word-wrap: break-word; /* Breaks long words to prevent overflow */
+    max-width: 100%; /* Ensures content doesn't extend beyond the card */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.user-Card p, .user-Card img {
+    animation: slideIn 3s ease-out forwards; /* Adjust timing and easing to your preference */
+}
+
+.user-post {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centers the posts in the container */
+    align-items: flex-start; /* Aligns the tops of the posts */
+    padding: 20px;
+}
+
+.postCard {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 300px; /* Adjust as needed */
+    word-wrap: break-word;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.userTitle {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.userBody {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.userTag {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.userReaction {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.userReaction:before {
+    content: '👍';
+    margin-right: 5px;
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.commentSection p {
+    margin-top: 10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the start of the container */
+    padding-top: 20px; /* Add some space above the h1 */
+}
+
+.about-container h1 {
+    margin: 0;
+    padding-bottom: 10px; /* Add some space below the h1 */
+    text-align: center; /* Ensure the text is centered if it wraps */
+    font-size: 35px;
+}
+
+
+.triple-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    flex-wrap: wrap; /* Allows cards to wrap within the container */
+    margin-top: 0;
+}
+
+.triple-column .text-content {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid green;
+}
+
+/* Card styles */
+.card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    margin: 10px; /* Added margin for spacing between cards */
+}
+
+.card:hover {
+    width: 600px;
+}
+
+.card .imgBx {
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.card .imgBx img {
+    max-width: 250px;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .imgBx img {
+    transform: rotate(-35deg) translateX(-20px);
+}
+
+.card .details {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .details {
+    left: 300px;
+}
+
+.card .details::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+    z-index: 1;
+}
+
+/* Additional styles */
+.card .details h3, .card .details h4, p {
+    color: #fff;
+}
+
+.card .details h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.card .details h3 span {
+    font-size: 0.65em;
+    font-weight: 300;
+    opacity: 0.85;
+    text-transform: none;
+}
+
+.card .details h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.detials p {
+    font-size: 0.8em;
+    opacity: 0.85;
+}
+
+.size, .size li {
+    display: flex;
+    gap: 10px;
+}
+
+.size li {
+    list-style: none;
+    color: #fff;
+    font-size: 0.9em;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.size li:hover {
+    background: #fff;
+    color: #4ba9e9;
+    opacity: 1;
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 70%;
+    margin-left: 12%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus-within {
+    outline: none;
+    border-width: 3px;
+}
+
+.contact-form textarea:focus-within {
+    outline: none;
+    border-color: #24436c;
+    border-width: 3px;
+}
+
+.contact-form button {
+    border-radius: 20px;
+    border-color: black;
+    font-size: 22px;
+    padding: 10px 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Added to center text in flex container */
+    align-items: center; /* Added to center text in flex container */
+    margin: auto;
+}
+
+.contact-form button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+
+.site-footer {
+    border: 1px solid white;
+    margin-top: 50px;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-container > div {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 20px;
+}
+
+.footer-container h3 {
+    margin-bottom: 20px;
+}
+
+.footer-container p, .footer-container ul, .footer-container ul li {
+    margin-bottom: 10px;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-container ul li a:hover {
+    color: #4ba9e9;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
